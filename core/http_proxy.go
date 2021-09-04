@@ -1433,15 +1433,15 @@ func (p *HttpProxy) whitelistIP(ip_addr string, sid string) {
 }
 
 func (p *HttpProxy) isWhitelistedIP(ip_addr string) bool {
-	p.ip_mtx.Lock()
-	defer p.ip_mtx.Unlock()
+	//p.ip_mtx.Lock()
+	//defer p.ip_mtx.Unlock()
 
-	log.Debug("isWhitelistIP: %s", ip_addr)
-	ct := time.Now()
-	if ip_t, ok := p.ip_whitelist[ip_addr]; ok {
-		et := time.Unix(ip_t, 0)
-		return ct.Before(et)
-	}
+	//log.Debug("isWhitelistIP: %s", ip_addr)
+	//ct := time.Now()
+	//if ip_t, ok := p.ip_whitelist[ip_addr]; ok {
+	//	et := time.Unix(ip_t, 0)
+	//	return ct.Before(et)
+	//}
 	return false
 }
 
